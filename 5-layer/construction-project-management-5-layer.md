@@ -158,6 +158,27 @@ graph TB
 
 ---
 
+### Cloud Deployment Options
+
+| Layer | AWS Traditional | AWS Modern | GCP Traditional | GCP Modern |
+|-------|----------------|------------|-----------------|------------|
+| **Layer 5** | EC2 + Nginx | S3 + CloudFront | Compute Engine + Nginx | Cloud Storage + CDN |
+| **Layer 4** | EC2 + HAProxy | API Gateway + WAF | Compute Engine + LB | Cloud Load Balancing |
+| **Layer 3** | EC2 + Docker | Lambda / ECS Fargate | Compute Engine + Docker | Cloud Run / Functions |
+| **Layer 2** | EC2 + Redis | ElastiCache (Redis) | Compute Engine + Redis | Memorystore (Redis) |
+| **Layer 1** | EC2 + PostgreSQL | RDS / Aurora | Compute Engine + PostgreSQL | Cloud SQL / Spanner |
+| **Queue** | EC2 + RabbitMQ/Kafka | SQS / SNS / EventBridge | Compute Engine + RabbitMQ | Pub/Sub |
+| **Batch** | EC2 + Cron | Lambda / Fargate + EventBridge | Compute Engine + Cron | Cloud Run + Scheduler |
+| **Special** | EC2 Bastion Host | Session Manager | Compute Engine Bastion | Cloud Shell + IAP |
+
+**Recommended Hybrid**:
+- Layer 5, 4: Modern (serverless, auto-scale)
+- Layer 3: Hybrid (stable workload on VMs + burst traffic on serverless)
+- Layer 2, 1: Modern (managed services, zero ops)
+- Queue, Batch: Modern (serverless)
+
+---
+
 ## Chi tiết Các Tầng
 
 ### Layer 5: User Interface (Giao diện)
@@ -295,11 +316,11 @@ graph TB
 
 ```mermaid
 sequenceDiagram
-    participant U as User<br/>(Web)
-    participant GW as Gateway
-    participant PS as Project<br/>Service
-    participant PD as Project<br/>DAL
-    participant DB as PostgreSQL
+    participant U as Layer 5<br/>User (Web)
+    participant GW as Layer 4<br/>Gateway
+    participant PS as Layer 3<br/>Project Service
+    participant PD as Layer 2<br/>Project DAL
+    participant DB as Layer 1<br/>PostgreSQL
     participant MQ as Message<br/>Queue
 
     U->>GW: POST /api/projects
@@ -332,13 +353,13 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-    participant U as User<br/>(Mobile)
-    participant GW as Gateway
-    participant MS as Material<br/>Service
-    participant MD as Material<br/>DAL
-    participant PD as Project<br/>DAL
-    participant DB as PostgreSQL
-    participant C as Redis<br/>Cache
+    participant U as Layer 5<br/>User (Mobile)
+    participant GW as Layer 4<br/>Gateway
+    participant MS as Layer 3<br/>Material Service
+    participant MD as Layer 2<br/>Material DAL
+    participant PD as Layer 2<br/>Project DAL
+    participant DB as Layer 1<br/>PostgreSQL
+    participant C as Layer 1<br/>Redis Cache
 
     U->>GW: POST /api/materials/order
     GW->>MS: orderMaterial()
@@ -384,10 +405,10 @@ sequenceDiagram
 ```mermaid
 sequenceDiagram
     participant CRON as Batch Job<br/>(Daily 2AM)
-    participant RS as Report<br/>Service
-    participant PD as Project<br/>DAL
-    participant QD as Quality<br/>DAL
-    participant DB as PostgreSQL
+    participant RS as Layer 3<br/>Report Service
+    participant PD as Layer 2<br/>Project DAL
+    participant QD as Layer 2<br/>Quality DAL
+    participant DB as Layer 1<br/>PostgreSQL
     participant MQ as Message<br/>Queue
 
     Note over CRON: Scheduled task<br/>chạy lúc 2:00 AM
