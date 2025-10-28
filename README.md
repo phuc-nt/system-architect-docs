@@ -10,7 +10,8 @@ A layered architecture pattern that separates concerns into 5 distinct layers.
 
 **Main Documents**:
 - [5-Layer Architecture Overview](./5-layer/5-layer-architecture.md) - Core concepts and principles
-- [Construction Project Management Example](./5-layer/construction-project-management-5-layer.md) - Practical example with diagrams
+- [Construction Project Management Example (Vietnamese)](./5-layer/construction-project-management-5-layer.md) - Practical example with diagrams
+- [Construction Project Management Example (English)](./5-layer/construction-project-management-5-layer-en.md) - Complete English version with diagrams
 
 **Key Benefits**:
 - Clear separation of concerns
