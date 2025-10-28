@@ -1,34 +1,56 @@
 # System Architecture Documentation
 
-Kho lưu trữ tài liệu về kiến trúc hệ thống cho mục đích giảng dạy.
+A collection of system architecture documentation for teaching purposes.
 
-## Nội dung
+## 📚 Architecture Patterns
 
-### 📁 5-layer-architecture
+### 1. [5-Layer Architecture](./5-layer/)
 
-Tài liệu về kiến trúc 5 tầng (5-Layer Architecture):
-- **5-layer-architecture.md**: Tài liệu gốc về 5-Layer Architecture
-- **construction-project-management-5-layer.md**: Ví dụ minh họa qua phần mềm quản lý dự án xây dựng
+A layered architecture pattern that separates concerns into 5 distinct layers.
 
-Kiến trúc 5 tầng giúp:
-- Phân tách rõ ràng trách nhiệm (Separation of Concerns)
-- Dễ bảo trì và mở rộng (Maintainability & Scalability)
-- Tăng khả năng tái sử dụng (Reusability)
-- Dễ kiểm thử (Testability)
+**Main Documents**:
+- [5-Layer Architecture Overview](./5-layer/5-layer-architecture.md) - Core concepts and principles
+- [Construction Project Management Example](./5-layer/construction-project-management-5-layer.md) - Practical example with diagrams
+
+**Key Benefits**:
+- Clear separation of concerns
+- Improved maintainability and scalability
+- Enhanced reusability and testability
+- Independent layer scaling
+
+**Best For**: Large-scale applications, teams > 5 people, long-term maintenance projects
 
 ---
 
-## Mục đích
+### 2. Microservices Architecture *(Coming Soon)*
 
-Tài liệu được biên soạn phục vụ giảng dạy về kiến trúc hệ thống, giúp sinh viên và người học:
-- Hiểu các mô hình kiến trúc phổ biến
-- Áp dụng vào dự án thực tế
-- Đưa ra quyết định thiết kế phù hợp
+### 3. Event-Driven Architecture *(Coming Soon)*
 
-## Đóng góp
+### 4. Hexagonal Architecture (Ports & Adapters) *(Coming Soon)*
 
-Tài liệu được cập nhật và bổ sung liên tục. Mọi góp ý xin gửi qua Issues.
+### 5. CQRS Pattern *(Coming Soon)*
 
-## License
+---
 
-Tài liệu được chia sẻ cho mục đích giáo dục.
+## 🎯 Purpose
+
+This repository provides educational materials on system architecture to help students and learners:
+- Understand common architectural patterns
+- Apply patterns to real-world projects
+- Make informed design decisions
+- Learn through practical examples
+
+## 🤝 Contributing
+
+Documentation is continuously updated. Feel free to submit issues or suggestions for improvements.
+
+## 📖 How to Use
+
+1. Browse the architecture patterns above
+2. Read the overview document to understand concepts
+3. Study the practical examples with diagrams
+4. Apply patterns to your own projects
+
+## 📝 License
+
+All documentation is shared for educational purposes.
