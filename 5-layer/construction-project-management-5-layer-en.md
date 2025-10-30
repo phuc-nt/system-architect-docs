@@ -1,5 +1,27 @@
 # 5-Layer Architecture - Construction Project Management System
 
+## Opening Script
+
+**Duration**: 5 minutes
+
+"Hello everyone! Today we're going to learn about **5-Layer Architecture** - one of the most popular architectures when building large-scale systems.
+
+First, I'd like to ask: **When you code a small project, what do you usually do?**
+- Maybe all code sits in 1 file?
+- Or split into a few files but without clear rules?
+- As the project grows, finding bugs and adding new features becomes really difficult?
+
+**The Problem**: When a project grows from 5 people to 50 people, from 10 features to 100 features, we need a clear **organizational structure**.
+
+**The Solution**: 5-Layer Architecture helps us:
+- ✅ Break down the system into clear parts
+- ✅ Each team is responsible for a specific layer
+- ✅ Easier to maintain, scale, and test
+
+Today, we'll learn through a real-world example: **Construction Project Management System**. This is a complex system with many features, making it perfect for illustrating 5-Layer Architecture."
+
+---
+
 ## Introduction
 
 This document illustrates 5-Layer Architecture through a practical example: Construction Project Management System.
@@ -9,6 +31,14 @@ This document illustrates 5-Layer Architecture through a practical example: Cons
 - Material management
 - Quality inspection
 - Reporting
+
+**Target Audience**: First-year students, software architecture beginners
+
+**Learning Objectives**:
+1. Understand the role of each layer in the architecture
+2. Know how to apply 5-Layer Architecture to real projects
+3. Grasp the communication rules between layers
+4. Distinguish when to use and when not to use this architecture
 
 ---
 

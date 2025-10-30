@@ -1,5 +1,27 @@
 # Kiến trúc 5 Tầng - Phần mềm Quản lý Dự án Xây dựng
 
+## Script Mở bài
+
+**Thời lượng**: 5 phút
+
+"Chào các bạn! Hôm nay chúng ta sẽ học về **Kiến trúc 5 tầng** - một trong những kiến trúc phổ biến nhất khi xây dựng hệ thống lớn.
+
+Trước tiên, tôi muốn hỏi: **Khi các bạn code một dự án nhỏ, các bạn thường làm thế nào?**
+- Có thể tất cả code nằm trong 1 file?
+- Hoặc chia thành vài file nhưng không có quy tắc rõ ràng?
+- Khi dự án lớn dần lên, việc tìm bug, thêm tính năng mới trở nên rất khó khăn?
+
+**Vấn đề**: Khi dự án phát triển từ 5 người lên 50 người, từ 10 tính năng lên 100 tính năng, chúng ta cần một **cấu trúc tổ chức** rõ ràng.
+
+**Giải pháp**: Kiến trúc 5 tầng giúp chúng ta:
+- ✅ Chia nhỏ hệ thống thành các phần rõ ràng
+- ✅ Mỗi team chịu trách nhiệm một tầng cụ thể
+- ✅ Dễ bảo trì, mở rộng, và test
+
+Hôm nay, chúng ta sẽ học qua ví dụ thực tế: **Phần mềm quản lý dự án xây dựng**. Đây là hệ thống phức tạp với nhiều tính năng, rất phù hợp để minh họa kiến trúc 5 tầng."
+
+---
+
 ## Giới thiệu
 
 Tài liệu này minh họa kiến trúc 5 tầng (5-Layer Architecture) qua ví dụ thực tế: Phần mềm quản lý dự án xây dựng.
@@ -9,6 +31,14 @@ Tài liệu này minh họa kiến trúc 5 tầng (5-Layer Architecture) qua ví
 - Quản lý vật tư
 - Kiểm tra chất lượng
 - Báo cáo
+
+**Đối tượng học**: Sinh viên năm nhất, người mới học kiến trúc phần mềm
+
+**Mục tiêu học tập**:
+1. Hiểu rõ vai trò của từng tầng trong kiến trúc
+2. Biết cách áp dụng kiến trúc 5 tầng vào dự án thực tế
+3. Nắm được quy tắc giao tiếp giữa các tầng
+4. Phân biệt được khi nào nên và không nên dùng kiến trúc này
 
 ---
 
